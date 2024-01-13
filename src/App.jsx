@@ -5,12 +5,14 @@ import Profile from './pages/Profile';
 import Signin from './pages/Signin';
 import Signout from './pages/Signout';
 import Home from './pages/Home';
+import Navbar from './components/Navbar';
 import './assets/main.css';
 
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About/>}/>
