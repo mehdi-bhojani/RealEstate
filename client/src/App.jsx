@@ -6,7 +6,9 @@ import Signin from './pages/Signin';
 import Signout from './pages/Signout';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+
 import './assets/main.css';
+import Signup from './pages/signup';
 
 
 export default function App() {
@@ -19,6 +21,7 @@ export default function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/sign-in" element={<Signin />}/>
         <Route path="/sign-out" element={<Signout />}/>
+        <Route path="/sign-up" element={<Signup />}/>
       </Routes>
     </BrowserRouter>
   )

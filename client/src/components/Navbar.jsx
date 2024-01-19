@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+// import  { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
-  const onToggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  // const onToggleMenu = () => {
+  //   setMenuOpen(!menuOpen);
+  // };
 
   return (
     <div className="w-screen bg-[#f2f4ff]">
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link to="/about">About</Link>
             </li>
             <li className="hover:underline ">
-              <Link to="/signin">Signin</Link>
+              <Link to="/sign-in">Signin</Link>
             </li>
           </ul>
         </div>
