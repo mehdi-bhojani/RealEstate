@@ -73,7 +73,7 @@ export default function Signup() {
             className="disabled:opacity-80 rounded-lg my-5 bg-slate-500 p-3 text-white uppercase font-medium hover:bg-slate-400"
             type="submit"
           >
-            Sign Up
+            {(loading)?"Loading":"Sign Up"}
           </button>
         </form>
         <span>
