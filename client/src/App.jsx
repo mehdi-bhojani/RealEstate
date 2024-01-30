@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 
 import './assets/main.css';
 import Signup from './pages/signup';
+import PrivateRoute from './components/PrivateRoute';
 
 
 export default function App() {
@@ -18,10 +19,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/profile" element={<Profile/>}/>
         <Route path="/sign-in" element={<Signin />}/>
         <Route path="/sign-out" element={<Signout />}/>
         <Route path="/sign-up" element={<Signup />}/>
+        <Route element={<PrivateRoute />} >
+          <Route path="/profile" element={<Profile/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   )

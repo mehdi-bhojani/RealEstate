@@ -5,7 +5,7 @@ import { signInSuccess } from '../redux/user/userSlice';
 import {useNavigate} from 'react-router-dom';
 
 function Oauth() {
-    const diapatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate()
     const handleGoogleClick = async () =>{
         try {
@@ -26,8 +26,8 @@ function Oauth() {
                     photo : result.user.photoURL
                 })
             })
-            const data = res.json();
-            diapatch(signInSuccess(data));
+            const data = await res.json();
+            dispatch(signInSuccess(data));
             navigate('/');        
         } catch (error) {
             console.log("Error by google auth, "+error)
