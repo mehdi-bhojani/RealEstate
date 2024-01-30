@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch,useSelector} from "react-redux";
 import { signInStart,signInFailure, signInSuccess } from "../redux/user/userSlice";
+import Oauth from "../components/Oauth";
 
 
 export default function Signin() {
@@ -66,11 +67,12 @@ export default function Signin() {
             id="password"
           />
           <button
-            className="disabled:opacity-80 rounded-lg my-5 bg-slate-500 p-3 text-white uppercase font-medium hover:bg-slate-400"
+            className="disabled:opacity-80 rounded-lg mt-5 bg-slate-500 p-3 text-white uppercase font-medium hover:bg-slate-400"
             type="submit"
           >
             {(loading)?"Loading":"Sign In"}
           </button>
+            <Oauth/>
         </form>
         <span>
           Dont had an account?{" "}

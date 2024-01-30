@@ -1,6 +1,6 @@
 // import  { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch, FaBars } from "react-icons/fa";
+import { FaSearch} from "react-icons/fa";
 
 const Navbar = () => {
   // const [menuOpen, setMenuOpen] = useState(false);

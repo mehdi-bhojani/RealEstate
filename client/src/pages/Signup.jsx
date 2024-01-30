@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Oauth from "../components/Oauth";
 
 export default function Signup() {
   const [formData, setFormData] = useState({});
@@ -70,11 +71,13 @@ export default function Signup() {
             id="password"
           />
           <button
-            className="disabled:opacity-80 rounded-lg my-5 bg-slate-500 p-3 text-white uppercase font-medium hover:bg-slate-400"
+            className="disabled:opacity-80 rounded-lg mt-5 bg-slate-500 p-3 text-white uppercase font-medium hover:bg-slate-400"
             type="submit"
           >
             {(loading)?"Loading":"Sign Up"}
           </button>
+            <Oauth />
+
         </form>
         <span>
           Already had an account?{" "}
