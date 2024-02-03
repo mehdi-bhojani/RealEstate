@@ -3,6 +3,18 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+// service firebase.storage {
+//   match /b/{bucket}/o {
+//     match /{allPaths=**} {
+//       allow read;
+//       allow write: if
+//       request.resource.size < 2*1024*1024 && 
+//       request.resource.contentType.matches('/image/.*') 
+//     }
+//   }
+// }
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
