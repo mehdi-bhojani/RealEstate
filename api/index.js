@@ -5,11 +5,13 @@ import dotenv from 'dotenv';
 import UserRouter from './routes/user.routes.js';
 import AuthRouter from './routes/auth.routes.js';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 // initialization of imported library
 dotenv.config();
 const app = express();
 app.use(cors());
+app.use(cookieParser());
 
 // using json as req body - should be placed before route declarations
 app.use(express.json());
