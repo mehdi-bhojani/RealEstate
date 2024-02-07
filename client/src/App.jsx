@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import './assets/main.css';
 import Signup from './pages/signup';
 import PrivateRoute from './components/PrivateRoute';
+import CreateListing from './pages/CreateListing';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/sign-up" element={<Signup />}/>
         <Route element={<PrivateRoute />} >
           <Route path="/profile" element={<Profile/>}/>
+          <Route path="/create-listing" element={<CreateListing />}/>
         </Route>
       </Routes>
     </BrowserRouter>

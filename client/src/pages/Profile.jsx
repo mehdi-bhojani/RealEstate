@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import {Link} from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
 import {
@@ -172,6 +173,7 @@ export default function Profile() {
           {loading?"loading":"update"}
         </button>
       </form>
+      <Link to={"/create-listing"} className='bg-green-600 p-3 text-center text-white rounded-lg mt-2 w-full uppercase flex justify-center'>Create Listing</Link>
       <div className='flex justify-between mt-5'>
         <span onClick={handleUserDelete} className='text-red-700 cursor-pointer'>Delete account</span>
         <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>Sign out</span>
