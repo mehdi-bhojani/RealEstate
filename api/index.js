@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import UserRouter from './routes/user.routes.js';
 import AuthRouter from './routes/auth.routes.js';
+import ListingRouter from './routes/listing.routes.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
@@ -26,6 +27,7 @@ app.get('/', (req, res) => res.send('Hello World!'));
 // route declarations
 app.use('/api/user', UserRouter);
 app.use('/api/auth', AuthRouter);
+app.use('/api/listing', ListingRouter);
 
 // error handling middleware
 app.use((err, req, res, next) => {
