@@ -31,6 +31,7 @@ export default function Profile() {
   const [updateSuccess, setUpdateSuccess] = useState(false);
   const [listingError, setListingError] = useState(false);
   const [userListings, setUserListings] = useState([]);
+
   // firebase storage
   // allow read;
   // allow write: if
@@ -140,6 +141,22 @@ export default function Profile() {
       return setListingError("Error Showing list");
     }
   };
+
+  const handleListingDelete = async (id) =>{
+    try {
+      const res = await fetch(`/api/listing/delete/${id}`,{
+        method : 'DELETE',
+      });
+      const data = res.json();
+      if(data.success === false){
+        console.log(data.message);
+        return;
+      }
+      setUserListings((prev)=> prev.filter((listing)=> listing._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -254,8 +271,8 @@ export default function Profile() {
                 {listing.name}
               </Link>
               <div className="controls flex flex-col">
-                <span className="text-red-700 uppercase">Delete</span>
-                <span className="text-blue-700 uppercase">Edit</span>
+                <span onClick={()=>handleListingDelete(listing._id)} className="text-red-700 uppercase cursor-pointer">Delete</span>
+                <span className="text-blue-700 uppercase cursor-pointer">Edit</span>
               </div>
             </div>
           ))}
