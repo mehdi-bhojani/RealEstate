@@ -12,7 +12,7 @@ const Navbar = () => {
   // };
 
   return (
-    <div className="w-screen bg-[#f2f4ff]">
+    <div className="w-full bg-[#f2f4ff]">
       <header>
         <div className="flex justify-between items-center py-4">
           <h1 className="font-bold text-lg mx-auto sm:text-2xl">
